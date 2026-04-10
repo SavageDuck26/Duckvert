@@ -1,0 +1,16 @@
+[package]
+name = "Duckvert"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+image = "0.25"
+printpdf = "0.7"
+lopdf = "0.34"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
